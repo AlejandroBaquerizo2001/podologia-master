@@ -1,0 +1,145 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+}
+/* Sidebar */
+.sidebar {
+  min-height: calc(100vh - 56px - 73px); /* Altura total - header - footer */
+  border-right: 1px solid #dee2e6;
+}
+
+.nav-link {
+  color: #495057;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: #0d6efd;
+  color: white !important;
+}
+
+/* Contenido principal */
+.main-content {
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 56px - 73px); /* Igual que sidebar */
+}
+
+
+footer {
+  width: 100%;
+}
+/* Estilos para los enlaces de navegación */
+.nav-link-custom {
+  color: #495057;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link-custom:hover {
+  background-color: rgba(58, 123, 213, 0.1);
+  color: #3a7bd5;
+  transform: translateX(5px);
+}
+
+.nav-link-custom.active {
+  background-color: #3a7bd5;
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(58, 123, 213, 0.3);
+}
+
+.nav-link-custom i {
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover i {
+  transform: scale(1.1);
+}
+
+/* Asegurar que los iconos estén alineados */
+.bi {
+  vertical-align: middle;
+}
+.hover-shadow:hover {
+  box-shadow: 0 0 1rem rgba(0, 123, 255, 0.4) !important;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.bg-gradient-red-black {
+  background: linear-gradient(135deg, #8B0000 0%, #000000 100%);
+}
+.text-gold {
+  color: #FFD700 !important;
+}
+.text-gold-opacity {
+  color: rgba(255, 215, 0, 0.7);
+}
+.text-gold-light {
+  color: #FFF8DC;
+}
+.bg-natlan-dark {
+  background-color: #1A1A1A;
+}
+.bg-natlan-chat {
+  background-color: #2B2B2B;
+}
+.bg-natlan-input {
+  background-color: #333333 !important;
+  border-color: #FFD700 !important;
+}
+.bg-natlan-user {
+  background: linear-gradient(90deg, #8B0000, #4B0000);
+}
+.bg-natlan-bot {
+  background: linear-gradient(90deg, #333333, #5A5A5A);
+}
+.bg-natlan-system {
+  background: #000000;
+  border: 1px solid #FFD700 !important;
+}
+.bg-light-volcano {
+  background-color: #f8f9fa;
+  background-image: url('https://i.imgur.com/X3mJtRr.png'); /* Textura sutil */
+}
