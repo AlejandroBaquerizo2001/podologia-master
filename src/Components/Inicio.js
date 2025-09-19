@@ -24,14 +24,12 @@ const Inicio = () => {
         <Card.Body>
           <Card.Title className="text-primary">
             <FaHeartbeat className="me-2" />
-            Bienvenido a Información en Salud
+            Welcome to Health Information
           </Card.Title>
           <Card.Text>
-            Este sitio proporciona información confiable y actualizada sobre diversos temas de salud.
-            Navega por nuestro menú para encontrar información sobre enfermedades comunes, medidas de prevención
-            y cómo contactar con profesionales de la salud.
+            This site provides reliable and up-to-date information on various health topics. Browse our menu to find information on common diseases, preventive measures, and how to contact healthcare professionals.
           </Card.Text>
-          <Button variant="primary">Más información</Button>
+          <Button variant="primary">More information</Button>
         </Card.Body>
       </Card>
 

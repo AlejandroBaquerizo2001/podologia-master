@@ -1,4 +1,3 @@
-// Components/Dashboard.js
 import React, { useState } from 'react';
 import { Container, Row, Col, Nav, Card, Dropdown } from 'react-bootstrap';
 import { FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
@@ -7,6 +6,7 @@ import Agendas from './Agendas';
 import Bibliotecas from './Bibliotecas';
 import Resultado from './Resultado';
 import AIAsistente from './AIAsistente';
+import Perfil from './Perfil';
 
 const Dashboard = ({ user, onLogout }) => {
   const [activeTab, setActiveTab] = useState('fichas');
@@ -24,6 +24,8 @@ const Dashboard = ({ user, onLogout }) => {
         return <Resultado />;
       case 'ai':
         return <AIAsistente />;
+      case 'perfil':
+        return <Perfil userData={user} />;
       default:
         return <FichasMedicas />;
     }
@@ -58,7 +60,7 @@ const Dashboard = ({ user, onLogout }) => {
             </Dropdown.Toggle>
             
             <Dropdown.Menu>
-              <Dropdown.Item href="#">
+              <Dropdown.Item onClick={() => setActiveTab('perfil')}>
                 <FaUserCircle className="me-2" />
                 Perfil: {user?.email}
               </Dropdown.Item>

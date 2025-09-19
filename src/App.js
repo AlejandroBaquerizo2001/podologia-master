@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import PlanesCobro from './Components/PlanesCobro';
-import FichaMedica from './Components/FichaMedica';
 import Estadisticas from './Components/Estadisticas';
 import Agendamiento from './Components/Agendamiento';
 import Inicio from './Components/Inicio';
@@ -44,8 +43,6 @@ function App() {
     switch (activeTab) {
       case 'inicio':
         return <Inicio />;
-      case 'ficha-medica':
-        return <FichaMedica />;
       case 'estadisticas':
         return <Estadisticas />;
       case 'planes-cobro':
@@ -150,24 +147,14 @@ function App() {
                 >
                   <i className="bi bi-house-door me-2"></i>Home
                 </Nav.Link>
-                <Nav.Link 
-                  active={activeTab === 'ficha-medica'} 
-                  onClick={() => setActiveTab('ficha-medica')}
-                  className={`mb-2 nav-link-custom ${activeTab === 'ficha-medica' ? 'active' : ''}`}
-                  style={{ color: '#3a7bd5' }}
-                >
-
-                 <i className="bi bi-heart-pulse me-2"></i>Medical Records
-                </Nav.Link>
-
-
+                
                 {/* Menú Funcionalidades */}
                 <Nav.Link 
                   onClick={() => setShowSubmenu(!showSubmenu)}
                   className={`mb-2 nav-link-custom ${showSubmenu ? 'active' : ''}`}
                   style={{ color: '#3a7bd5' }}
                 >
-                  <i className="bi bi-list me-2"></i>Funcionalidades
+                  <i className="bi bi-list me-2"></i>Features
                 </Nav.Link>
                 {showSubmenu && (
                   <div className="ms-3">
@@ -176,7 +163,7 @@ function App() {
                       onClick={() => { setActiveTab('fichas'); setShowSubmenu(false); }}
                       className={`mb-2 nav-link-custom ${activeTab === 'fichas' ? 'active' : ''}`}
                     >
-                      Fichas
+                      Fact sheets
                     </Nav.Link>
                     <Nav.Link 
                       active={activeTab === 'agenda'} 
@@ -190,14 +177,14 @@ function App() {
                       onClick={() => { setActiveTab('biblioteca'); setShowSubmenu(false); }}
                       className={`mb-2 nav-link-custom ${activeTab === 'biblioteca' ? 'active' : ''}`}
                     >
-                      Biblioteca
+                      Library
                     </Nav.Link>
                     <Nav.Link 
                       active={activeTab === 'resultados'} 
                       onClick={() => { setActiveTab('resultados'); setShowSubmenu(false); }}
                       className={`mb-2 nav-link-custom ${activeTab === 'resultados' ? 'active' : ''}`}
                     >
-                      Resultados
+                      Results
                     </Nav.Link>
                   </div>
                 )}
